@@ -121,7 +121,9 @@ const RepoSearch: React.FC<IProps> = props => {
     return (
         <div className="RepoSearch repo-search">
             <form onSubmit={handleSearch}>
-            <label>Organization</label>
+                <fieldset>
+                    <legend>Search</legend>
+                    <label>Organization</label>
             <input
                 type="text"
                 onChange={handleOrgNameChange}
@@ -134,6 +136,7 @@ const RepoSearch: React.FC<IProps> = props => {
                 value={search.repoName}
             />
             <button type="submit">Search</button>
+                </fieldset>
             </form>
         {repo.id && (
             <div className="repo-item">
